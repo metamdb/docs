@@ -1,0 +1,69 @@
+reaction,substrates,arrow,products
+v1 [PGLUCISOM-RXN],G6P [Glucose-6-phosphate],<->,F6P [CPD-18719]
+v2 [6PFRUCTPHOS-RXN],F6P [CPD-18719],->,FBP [FRUCTOSE-16-DIPHOSPHATE]
+v3 [F16ALDOLASE-RXN],FBP [FRUCTOSE-16-DIPHOSPHATE],<->,DHAP [136411] + GAP [GAP]
+v4 [TRIOSEPISOMERIZATION-RXN],DHAP [136411],<->,GAP [GAP]
+v5,GAP (abc)  [GAP],<->,PG3 (acb)
+v6,PG3 (abc),<->,PEP (cba)  [PHOSPHO-ENOL-PYRUVATE]
+v7 [PEPDEPHOS-RXN],PEP [PHOSPHO-ENOL-PYRUVATE],->,Pyr [PYRUVATE]
+v8,G6P (abcdef),->,PG6 (abcdef) [CPD-2961]
+v9 [RXN-9952],PG6 [CPD-2961],->,Ru5P [RIBULOSE-5P] + CO2 [CARBON-DIOXIDE]
+v10 [RIBULP3EPIM-RXN],Ru5P [RIBULOSE-5P] ,<->,X5P [XYLULOSE-5-PHOSPHATE]
+v11 [RIB5PISOM-RXN],Ru5P [RIBULOSE-5P] ,<->,R5P [C00117]
+v12,X5P (abcde) [XYLULOSE-5-PHOSPHATE],↔,EC2 (ac) + GAP (ebd) [GAP]
+v13,F6P (abcdef) [CPD-18719],↔,EC2 (bf) + E4P (edca)
+v14,S7P (abcdefg) [D-SEDOHEPTULOSE-7-P],↔,EC2 (ab) + R5P (gfedc) [C00117]
+v15,F6P (abcdef) [CPD-18719],↔,EC3 (bfe) + GAP (dac) [GAP]
+v16,S7P (abcdefg) [D-SEDOHEPTULOSE-7-P],↔,EC3 (abc) + E4P (defg)
+v17,PG6 [CPD-2961] (abcdef),->,KDPG [2-DEHYDRO-3-DEOXY-D-GLUCONATE] (dacebf)
+v18 [KDPGALDOL-RXN],KDPG [2-KETO-3-DEOXY-6-P-GLUCONATE],->,Pyr [PYRUVATE] + GAP [GAP]
+v19 [PYRUVDEH-RXN],Pyr [PYRUVATE],->,AcCoA [ACETYL-COA]  + CO2 [CARBON-DIOXIDE]
+v20 [CITSYN-RXN],OAA [OXALACETIC_ACID] + AcCoA [ACETYL-COA],->,Cit [CIT]
+v21,Cit [CIT] (abcdef),<->,Icit [C00311] (afcbed)
+v22 [ISOCITRATE-DEHYDROGENASE-NAD+-RXN],Icit [C00311] ,<->,AKG [2-KETOGLUTARATE] + CO2 [CARBON-DIOXIDE]
+v23 [2OXOGLUTARATEDEH-RXN],AKG [2-KETOGLUTARATE],->,SucCoA [SUC-COA] + CO2 [CARBON-DIOXIDE]
+v24 [SUCCCOASYN-RXN],SucCoA [SUC-COA],<->,Suc [SUC]
+v25 [SUCC-FUM-OXRED-RXN],Suc [SUC],<->,Fum [FUM]
+v26 [FUMHYDR-RXN],Fum [FUM],<->,Mal [MAL]
+v27 [MALATE-DEH-RXN],Mal [MAL],<->,OAA [OXALACETIC_ACID]
+v28 [MALIC-NADP-RXN],Mal [MAL],->,Pyr [PYRUVATE] + CO2 [CARBON-DIOXIDE]
+v29 [PEPCARBOX-RXN],PEP [PHOSPHO-ENOL-PYRUVATE] + CO2 [HCO3],<->,OAA [OXALACETIC_ACID]
+v30 [ACETYL-COA-HYDROLASE-RXN],AcCoA [ACETYL-COA],<->,Ac [ACET]
+v31 [BR22612],DHAP [136411],<->,Glyc3P [C00093]
+v32 [RXN-14965],Glyc3P [GLYCEROL-3P],->,Glyc [GLYCEROL]
+v33,Glyc (abc),->,HPA (acb)
+v34,HPA (abc),->,PDO (abc)
+v35,AKG (abcde) [2-KETOGLUTARATE],->,Glu (ecabd)
+v36,Glu (abcde),->,Gln (abcde)
+v37,Glu (abcde),->,Pro (abcde)
+v38,Glu (abcde) + CO2 (f) + Gln (ghijk) + Asp (lmno) + AcCoA (pq),->,Arg (abcdef) + AKG (ijhkg) [2-KETOGLUTARATE] + Fum (mnlo) + Ac (pq)
+v39,OAA (abcd) + Glu (efghi),->,Asp (dbac) + AKG (ghfie) [2-KETOGLUTARATE]
+v40,Asp (abcd),->,Asn (abcd)
+v41,Pyr (abc) + Glu (defgh),->,Ala (cba) + AKG (fgehd) [2-KETOGLUTARATE]
+v42,PG3 (abc) + Glu (defgh),->,Ser (abc) + AKG (fgehd) [2-KETOGLUTARATE]
+v43,Ser (abc),<->,Gly (ab) + MEETHF (c)
+v44,Gly (ab),<->,CO2 (a) + MEETHF (b)
+v45,Thr (abcd),->,Gly (ab) + AcCoA (dc)
+v46,Ser (abc) + AcCoA (de),->,Cys (abc) + Ac (de)
+v47,Asp (abcd) + Pyr (efg) + Glu (hijkl) + SucCoA (mnop),->,LL_DAP (abcdefg) + AKG (jkilh) + Suc (mnop)
+v48,LL_DAP (abcdefg),->,Lys (abcdef) + CO2 (g)
+v49,Asp (abcd),->,Thr (abcd)
+v50,Asp (abcd) + METHF (e) + Cys (fgh) + SucCoA (ijkl),->,Met (abcde) + Pyr (hgf) + Suc (ijkl)
+v51,Pyr (abc) + Pyr (def) + Glu (ghijk),->,Val (cbaed) + CO2 (f) + AKG (ijhkg)
+v52,AcCoA (ab) + Pyr (cde) + Pyr (fgh) + Glu (ijklm),->,Leu (badgfc) + CO2 (e) + CO2 (h) + AKG (kljmi)
+v53,Thr (abcd) + Pyr (efg) + Glu (hijkl),->,Ile (abfcde) + CO2 (g) + AKG (jkilh)
+v54,PEP (abc) + PEP (def) + E4P (ghij) + Glu (klmno),->,Phe (cbaedghij) + CO2 (f) + AKG (mnlok)
+v55,PEP (abc) + PEP (def) + E4P (ghij) + Glu (klmno),->,Tyr (cbaedghij) + CO2 (f) + AKG (mnlok)
+v56,Ser (abc) + R5P (defgh) + PEP (ijk) + E4P (lmno) + PEP (pqr) + Gln (stuvw),->,Trp (abcghilmnoj) + CO2 (k) + GAP (fde) + Pyr (pqr) + Glu (stuvw)
+v57,R5P (abcde) + FTHF (f) + Gln (ghijk) + Asp (lmno),->,His (edcbaf) + AKG (ijhkg) + Fum (mnlo)
+v58,MEETHF (a),->,METHF (a)
+v59,MEETHF (a),->,FTHF (a)
+v60,Gluc.pre (abcdef),->,G6P (fedcba)
+v61,Gluc.ext (abcdef),->,G6P (fedcba)
+v62,Cit.ext (abcdef),->,Cit (abcdef)
+v63,Glyc.ext (abc) + Dummy.ext,<->,Glyc (abc) + Dummy
+v64,PDO (abc),->,PDO.ext (abc)
+v65,Ac (ab),->,Ac.ext (ab)
+v66,CO2 (a) [CARBON-DIOXIDE],->,CO2.ext (a)
+v67,0.488*Ala + 0.281*Arg + 0.229*Asn + 0.229*Asp + 0.087*Cys + 0.25*Glu + 0.25*Gln + 0.582*Gly + 0.09*His + 0.276*Ile + 0.428*Leu + 0.326*Lys + 0.146*Met + 0.176*Phe + 0.21*Pro + 0.205*Ser + 0.241*Thr + 0.054*Trp + 0.131*Tyr + 0.402*Val + 0.205*G6P + 0.071*F6P + 0.754*R5P + 0.129*GAP + 0.619*PG3 + 0.051*PEP + 0.083*Pyr + 2.51*AcCoA + 0.087*AKG + 0.34*OAA + 0.443*MEETHF,->,39.68*Biomass
+v68,Dummy,->,Dummy.ext
