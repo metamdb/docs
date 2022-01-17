@@ -22,3 +22,7 @@ Substrate and product metabolite names with links to their respective [Metabolit
 
 ## Atom Mappings
 In this tab the atom mapping information is stored in the RXN file format, as well as the corresponding reaction image. Both files can be opened with the respective buttons and can be downloaded. The manual curation status is also depicted. If a user is [registered](/docs/user-management#loginregistration) the reaction can be [curated](/docs/user-management#curation).
+
+[:arrow_down: Download all atom mappings here!](https://metamdb.tu-bs.de/img/atom_mappings.zip)
+
+[:arrow_down: Download all reaction images here!](https://metamdb.tu-bs.de/img/reaction_images.zip)
